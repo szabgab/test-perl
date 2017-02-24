@@ -2,7 +2,7 @@
 #use warnings;
 
 use Test::More;
-plan tests => 4;
+plan tests => 3;
 
 # works starting from 5.10-
 # in 5.10: we get:
