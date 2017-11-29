@@ -2,5 +2,5 @@ For testing perl constructs on various versions of Perl without installing all t
 
 Thank you [Travis-CI](https://travis-ci.org/)
 
-[![Build Status](https://travis-ci.org/szabgab/test-perl.png)](https://travis-ci.org/szabgab/test-perl)
+[![Build Status](https://travis-ci.org/szabgab/try-perl-on-travis.png)](https://travis-ci.org/szabgab/try-perl-on-travis)
 
