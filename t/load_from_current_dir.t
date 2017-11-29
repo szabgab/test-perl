@@ -7,10 +7,19 @@ use Test::More;
 
 
 plan tests => 1;
+diag "Perl version is $]";
+diag explain \@INC;
+
+#BEGIN {
+#    # Who cares about security. We fully trust the current directory
+#    if ($] >= 5.026000) {
+#        push @INC, '.';
+#    }
+#}
+
 
 eval {
     require MyLocal;
 };
-diag $];
 is $@, '';
 
