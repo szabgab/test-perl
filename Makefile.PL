@@ -1,7 +1,7 @@
 use ExtUtils::MakeMaker;
 use Data::Dumper;
 print Dumper \@INC;
-print Dumper \%INC;
+print Dumper \%ENV;
 
 my %opts = (
 	'NAME'      => 'Test::Perl',

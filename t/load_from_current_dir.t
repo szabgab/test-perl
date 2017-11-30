@@ -9,7 +9,7 @@ use Test::More;
 plan tests => 1;
 diag "Perl version is $]";
 diag explain \@INC;
-diag explain \%INC;
+diag explain \%ENV;
 # Apparently 5.26 on travis already contains . https://travis-ci.org/szabgab/try-perl-on-travis/jobs/308853149
 
 #delete $ENV{'PERL_USE_UNSAFE_INC'};
