@@ -13,7 +13,7 @@ sub f {
    my $x = split /,/, $str;
 }
 
-f()
+f();
 
 pass;
 
