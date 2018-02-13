@@ -2,6 +2,8 @@ use strict;
 use warnings;
 
 use Test::More;
+use Test::Warn;
+
 plan tests => 1;
 
 my $str = "a,b,c";
@@ -13,7 +15,5 @@ sub f {
    my $x = split /,/, $str;
 }
 
-f();
-
-pass;
+warning_is    {f()} 'Use of implicit split to @_ is deprecated', "implicit warning";
 
