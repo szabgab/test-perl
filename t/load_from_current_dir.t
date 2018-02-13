@@ -15,12 +15,12 @@ diag explain \%ENV;
 #delete $ENV{'PERL_USE_UNSAFE_INC'};
 diag qx{$^X t/show_inc.pl};
 
-#BEGIN {
-#    # Who cares about security. We fully trust the current directory
-#    if ($] >= 5.026000) {
-#        push @INC, '.';
-#    }
-#}
+BEGIN {
+    # Who cares about security. We fully trust the current directory
+    if ($] >= 5.026000) {
+        push @INC, '.';
+    }
+}
 
 
 eval {
