@@ -15,7 +15,7 @@ sub f {
     my @expected;
     $SIG{__WARN__} = sub { push @warnings, @_; };
     my $x = split /,/, $str;
-    if ($] <= 5.010000) {
+    if ($] < 5.012000) {
         push @expected, 'Use of implicit split to @_ is deprecated';
     }
     is_deeply \@warnings, \@expected, 'implicit warning';
