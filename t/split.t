@@ -23,6 +23,8 @@ sub f {
     } else {
         is_deeply \@warnings, \@expected;
     }
+
+    my $first_count = (length($x) ? scalar split(":", $x) : 0);
 }
 
 f();
