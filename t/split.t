@@ -13,7 +13,7 @@ my $str = "a,b,c";
 sub f {
     my @warnings;
     my @expected;
-    local $SIG{__WARN__} = sub { push @warnings, @_; };
+    $SIG{__WARN__} = sub { push @warnings, @_; };
     my $x = split /,/, $str;
     if ($] <= 5.010000) {
         push @expected, 'Use of implicit split to @_ is deprecated';
