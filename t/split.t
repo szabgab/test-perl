@@ -4,6 +4,8 @@ use warnings;
 use Test::More;
 
 plan tests => 1;
+my @warnings;
+$SIG{__WARN__} = sub { push @warnings, @_; };
 
 my $str = "a,b,c";
 
@@ -11,9 +13,7 @@ my $str = "a,b,c";
 # Useless use of split in void context
 
 sub f {
-    my @warnings;
     my @expected;
-    $SIG{__WARN__} = sub { push @warnings, @_; };
     my $x = split /,/, $str;
     if ($] < 5.012000) {
         push @expected, 'Use of implicit split to @_ is deprecated';
