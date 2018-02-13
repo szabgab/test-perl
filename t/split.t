@@ -5,7 +5,9 @@ use Test::More;
 
 plan tests => 1;
 my @warnings;
+BEGIN {
 $SIG{__WARN__} = sub { push @warnings, @_; };
+}
 
 my $str = "a,b,c";
 
