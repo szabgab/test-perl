@@ -12,6 +12,8 @@ perl:
   - "5.12"
   - "5.10"
   - "5.8"
+before_install:
+  - cpanm --notest Devel::Cover::Report::Coveralls
 script:
 #  - perl t/show_inc.pl
 #  - prove
