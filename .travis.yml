@@ -20,3 +20,6 @@ script:
 #  - perl Makefile.PL
 #  - make test
   - perl Makefile.PL && make test
+after_success:
+  - cover -test -report coveralls
+
